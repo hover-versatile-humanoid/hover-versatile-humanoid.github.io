@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots">
+  <meta name="keywords" content="Reinforcement Learning, Sim-to-Real Transfer, Humanoid Teleoperatin, GPT-4o, Learning from Demonstration">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./H2O-Website-icon-crop.ico">
+
+  <meta property="og:site_name" content="HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots" />
+  <meta property="og:description" content="by Tairan He, Wenli Xiao, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Changliu Liu, Guanya Shi, Xiaolong Wang, Jim Fan, Yuke Zhu" />
+  <meta property="og:url" content="https://hover-versatile-humanoid/" />
+  <meta property="og:image" content="https://hover-versatile-humanoid/static/images/Preview-OmniH2O-GIF2M.gif" />
+  <meta property="og:image:secure" content="https://hover-versatile-humanoid/static/images/Preview-OmniH2O-GIF2M.gif" />
+  <meta property="og:video" content="https://www.youtube.com/embed/ofgxZHv0GMk" />
+  <meta property="og:video:secure" content="https://www.youtube.com/embed/ofgxZHv0GMk" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+
+  <meta property="article:publisher" content="https://tairanhe.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots" />
+  <meta name="twitter:description" content="by Tairan He, Wenli Xiao, Toru Lin, Zhengyi Luo, Zhenjia Xu, Zhenyu Jiang, Changliu Liu, Guanya Shi, Xiaolong Wang, Jim Fan, Yuke Zhu" />
+  <meta name="twitter:url" content="https://hover-versatile-humanoid/" />
+  <meta name="twitter:image" content="https://hover-versatile-humanoid//static/images/Preview-OmniH2O-GIF2M.gif" />
+  <meta name="twitter:site" content="@tairanhe99" />
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/ofgxZHv0GMk" />
+  <meta name="twitter:player:width" content="1280" />
+  <meta name="twitter:player:height" content="720" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HOVER: Versatile Neural Whole-Body <br> Controller  for Humanoid Robots</h1>
+
+          <!-- <div class="is-size-4 publication-authors">
+            <span class="author-block" style="font-size: 95%;">
+              <a href="https://tairanhe.com/">Tairan He</a>*&nbsp;&nbsp;
+              <a href="https://www.zhengyiluo.com/">Zhengyi Luo</a>*&nbsp;&nbsp;
+              <a href="https://xialin-he.github.io/">Xialin He</a>*&nbsp;&nbsp;
+              <a href="https://wenlixiao-cs.github.io/">Wenli Xiao</a>&nbsp;&nbsp;
+              <a href="https://zita-ch.github.io/">Chong Zhang</a>&nbsp;&nbsp;
+            </span>
+          </div>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block" style="font-size: 95%;">
+              <a href="https://wnzhang.net/">Weinan Zhang</a>&nbsp;&nbsp;
+              <a href="https://kriskitani.github.io/">Kris Kitani</a>&nbsp;&nbsp;
+              <a href="https://www.cs.cmu.edu/~cliu6/">Changliu Liu</a>&nbsp;&nbsp;
+              <a href="https://www.gshi.me/">Guanya Shi</a>&nbsp;&nbsp;
+            </span>
+          </div> -->
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block" style="font-size: 95%;">
+              <a href="https://tairanhe.com/">Tairan He</a>*&nbsp;&nbsp;
+              <a href="https://wenlixiao-cs.github.io/">Wenli Xiao</a>*&nbsp;&nbsp;
+              <a href="https://toruowo.github.io/">Toru Lin</a>&nbsp;&nbsp;
+              <a href="https://www.zhengyiluo.com/">Zhengyi Luo</a>&nbsp;&nbsp;
+              <a href="https://www.zhenjiaxu.com/">Zhenjia Xu</a>&nbsp;&nbsp;
+              <a href="https://scholar.google.com/citations?user=2KLTzZIAAAAJ&hl=en">Zhenyu Jiang</a>&nbsp;&nbsp;
+
+            
+              <span class="author-block" style="font-size: 100%;">
+                <a href="https://www.cs.cmu.edu/~cliu6/">Changliu Liu</a>&nbsp;&nbsp;
+                <a href="https://www.gshi.me/">Guanya Shi</a>&nbsp;&nbsp;
+                <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>&nbsp;&nbsp;
+                <a href="https://jimfan.me/">Linxi "Jim" Fan</a>&nbsp;&nbsp;
+                <a href="https://yukezhu.me/">Yuke Zhu</a>&nbsp;&nbsp;
+              </span>
+            </span>
+          </div>
+          <!-- <div class="column">
+            <image src="./static/images/logo.png" style="width: 65%;"></image>
+          </div> -->
+
+          <!-- <div class="is-size-4 publication-authors", style="margin-bottom: 0.5cm;">
+            CoRL 2024
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="./resources/OmniH2O_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+              </span> -->
+              <!-- arXiv Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.08858"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>ArXiv</span>
+                </a>
+              </span> -->
+              <!-- <span class="link-block">
+                <a href=https://youtu.be/ofgxZHv0GMk"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Datasets Link. -->
+              <!-- <span class="link-block">
+                <a href="https://cmu.box.com/s/kmayzq5ax2rxvwn97s0hzz0aq5vws9io" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Datasets</span>
+                </a>
+              </span> -->
+              <!-- twitter Link. -->
+              <!-- <span class="link-block">
+                <a href="https://x.com/TairanHe99/status/1799053120846402012"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/ofgxZHv0GMk" title="HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid whole-body control requires adapting to diverse tasks such as navigation, loco-manipulation, and tabletop manipulation, each demanding a different mode of control. For example, navigation relies on root velocity tracking, while tabletop manipulation prioritizes upper-body joint angle tracking. Existing approaches typically train individual policies tailored to a specific command space, limiting their transferability across modes. We present the key insight that full-body kinematic motion imitation can serve as a common abstraction for all these tasks and provide general-purpose motor skills for learning multiple modes of whole-body control. Building on this, we propose HOVER (Humanoid Versatile Controller), a multi-mode policy distillation framework that consolidates diverse control modes into a unified policy. HOVER enables seamless transitions between control modes while preserving the distinct advantages of each, offering a robust and scalable solution for humanoid control across a wide range of modes. By eliminating the need for policy retraining for each control mode, our approach improves efficiency and flexibility for future humanoid applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Create an intersection observer
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start playing the video
+          entry.target.play();
+        } else {
+          // Pause the video
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.5 }); // You can adjust the threshold value to suit your needs
+
+    // Observe each video element
+    document.querySelectorAll('.lazy-video').forEach(video => {
+      observer.observe(video);
+    });
+  });
+</script>
+
+<!-- <section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;" id="press-coverage">Media</h2>
+    <br>
+    <div class="columns is-centered">
+      <div class="column is-centered has-text-centered">
+        <a target="_blank" href="https://spectrum.ieee.org/video-friday-drone-vs-flying-canoe?share_id=8304126&utm_campaign=RebelMouse&utm_content=IEEE+Spectrum&utm_medium=social&utm_source=twitter">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/IEEE-Spectrum.svg" width="60%"></img>
+        </a>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <a target="_blank" href="https://needtoknow.co.uk/2024/06/11/human-to-humanoid-robot-designed-by-young-uni-student-can-chop-vegetables-clean-and-create-art/">
+          <img src="https://pbs.twimg.com/profile_banners/1392156315502452737/1718086580/1500x500" width="40%"></img>
+        </a>
+      </div>
+      <div class="column is-centered has-text-centered">
+        <a target="_blank" href="https://mp.weixin.qq.com/s/SskozMFEk-187AMv6_l2SA">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNFagYgzF3NEnWkOUuBC1ItNInFAjr2xO_YA&s" width="20%"></img>
+        </a>
+      </div>
+  </div>
+</section> -->
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>@article{he2024hover,
+      title={HOVER: Versatile Neural Whole-Body Controller for Humanoid Robots},
+      author={He, Tairan and Xiao, Wenli and Lin, Toru and Luo, Zhengyi and Xu, Zhenjia and Jiang, Zhenyu and Liu, Changliu and Shi, Guanya and Wang, Xiaolong and Fan, Linxi "Jim" and Zhu, Yuke},
+      journal={arXiv preprint arXiv:2406.08858},
+      year={2024}
+    }</code></pre>
+  </div>
+</section> -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template borrowed from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://robot-parkour.github.io/"><span class="dnerf">Robot-Parkour-Learning</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
