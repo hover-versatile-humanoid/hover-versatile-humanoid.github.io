@@ -177,6 +177,22 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid whole-body control requires adapting to diverse tasks such as navigation, loco-manipulation, and tabletop manipulation, each demanding a different mode of control. For example, navigation relies on root velocity tracking, while tabletop manipulation prioritizes upper-body joint angle tracking. Existing approaches typically train individual policies tailored to a specific command space, limiting their transferability across modes. We present the key insight that full-body kinematic motion imitation can serve as a common abstraction for all these tasks and provide general-purpose motor skills for learning multiple modes of whole-body control. Building on this, we propose HOVER (Humanoid Versatile Controller), a multi-mode policy distillation framework that consolidates diverse control modes into a unified policy. HOVER enables seamless transitions between control modes while preserving the distinct advantages of each, offering a robust and scalable solution for humanoid control across a wide range of modes. By eliminating the need for policy retraining for each control mode, our approach improves efficiency and flexibility for future humanoid applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- <section class="section">
   <div class="container">
     <div class="columns is-centered">
@@ -194,19 +210,131 @@
 
 <section class="section">
   <div class="container">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Humanoid whole-body control requires adapting to diverse tasks such as navigation, loco-manipulation, and tabletop manipulation, each demanding a different mode of control. For example, navigation relies on root velocity tracking, while tabletop manipulation prioritizes upper-body joint angle tracking. Existing approaches typically train individual policies tailored to a specific command space, limiting their transferability across modes. We present the key insight that full-body kinematic motion imitation can serve as a common abstraction for all these tasks and provide general-purpose motor skills for learning multiple modes of whole-body control. Building on this, we propose HOVER (Humanoid Versatile Controller), a multi-mode policy distillation framework that consolidates diverse control modes into a unified policy. HOVER enables seamless transitions between control modes while preserving the distinct advantages of each, offering a robust and scalable solution for humanoid control across a wide range of modes. By eliminating the need for policy retraining for each control mode, our approach improves efficiency and flexibility for future humanoid applications.
-          </p>
-        </div>
+    <h2 class="title is-2" style="text-align: center;">Supplement Video</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-quarters is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/HOVER-VideoSupplement-720P.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%; width: 100%;"></video>
       </div>
     </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Right-Hand Mode, Two Hand Mode, Left-Hand Mode</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-quarters is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/unitreeh1/HOVER-left-right-hand.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%; width: 100%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Head Mode, H2O Mode, OmniH2O Mode</h2>
+    <div class="columns is-centered">
+      <div class="column is-three-quarters is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/unitreeh1/HOVER-head-h2o-omnih2o.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%; width: 100%;"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Method</h2>
+    <!-- <h2 class="title is-4" style="text-align: center;">Stage 1: RL Pre-training with Soft Dynamics Constraints</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            In the RL pre-training stage, we allow robots to penetrate obstacles using an automatic curriculum that enforces soft dynamics constraints. This encourages robots to gradually learn to overcome these obstacles while minimizing penetrations. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/method/soft-dyanmics.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div>
+    <h2 class="title is-4" style="text-align: center;">Stage 2: RL Fine-tuning with Hard Dynamics Constraints</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <div class="content has-text-justified">
+          <p>
+            In the RL fine-tuning stage, we enforce all dynamics constraints and fine-tune the behaviors learned in the pre-training stage with realistic dynamics.         </p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-three-fifths is-centered has-text-centered">
+        <video controls autoplay loop muted playsinline src="./resources/method/hard-dynamics.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      </div>
+    </div> -->
+    <h2 class="title is-4" style="text-align: center;">Training Framework</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-thirds">
+        <div class="content has-text-justified">
+          <ol type="a">
+            <!-- <h2>Overview of the <strong style="color: OliveGreen;">\method distillation process</strong></h2> -->
+            <p>
+              The <span style="color: OliveGreen;"><strong>HOVER policy</strong></span> is distilled from the <span style="color: OrangeRed;"><strong>Oracle policy</strong></span> through proprioception and command masking. The task commands for the student are determined via <em>mode-specific</em> and <em>sparsity-based</em> masks, applied to both upper and lower body motions independently. These masks generate diverse task command modes, refining the student's inputs. The distillation employs DAgger to align the student’s actions with those of the oracle, optimizing through supervised learning on the oracle’s actions.
+            </p>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth">
+        <img src="./resources/method/HOVER-Distillation.png" alt="" style="width: 100%;" />
+      </div>
+    </div>
+
+
+
+
+    <h2 class="title is-4" style="text-align: center;">Deployment Framework</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-three-thirds">
+        <div class="content has-text-justified">
+          <ol type="a">
+            <!-- <h2>Overview of the <strong style="color: OliveGreen;">\method distillation process</strong></h2> -->
+            <p>
+              <strong>HOVER</strong> enables versatile humanoid control with a unified multi-mode command space. The versatile multi-mode command space supports 
+              <span style="color: NavyBlue;"><strong>kinematic position tracking (blue)</strong></span>, 
+              <span style="color: Peach;"><strong>local joint angle tracking (yellow)</strong></span>, and 
+              <span style="color: Purple;"><strong>root tracking (purple)</strong></span>. Highlighted boxes indicate active commands being tracked, while the masks (dashed boxes on the right) allow selective activation of different command spaces to accommodate various tasks.
+            </p>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifth has-text-centered">
+        <img src="./resources/method/AnyH2O-Deployment.png" alt="" style="width: 50%; margin: 0 auto;" />
+      </div>
+    </div>
+    
+
+  </div>
+
+
+  
+
+  
+
+
+  
+</section>
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
