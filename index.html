@@ -122,25 +122,25 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="./resources/OmniH2O_paper.pdf"
+              <span class="link-block">
+                <a href="./resources/HOVER_paper.pdf"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>PDF</span>
                 </a>
-              </span> -->
+              </span>
               <!-- arXiv Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2406.08858"
+              <span class="link-block">
+                <a href="https://arxiv.org/"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>ArXiv</span>
                 </a>
-              </span> -->
+              </span>
               <!-- <span class="link-block">
                 <a href=https://youtu.be/ofgxZHv0GMk"
                    class="external-link button is-normal is-rounded is-dark" target="_blank">
@@ -177,21 +177,7 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Humanoid whole-body control requires adapting to diverse tasks such as navigation, loco-manipulation, and tabletop manipulation, each demanding a different mode of control. For example, navigation relies on root velocity tracking, while tabletop manipulation prioritizes upper-body joint angle tracking. Existing approaches typically train individual policies tailored to a specific command space, limiting their transferability across modes. We present the key insight that full-body kinematic motion imitation can serve as a common abstraction for all these tasks and provide general-purpose motor skills for learning multiple modes of whole-body control. Building on this, we propose HOVER (Humanoid Versatile Controller), a multi-mode policy distillation framework that consolidates diverse control modes into a unified policy. HOVER enables seamless transitions between control modes while preserving the distinct advantages of each, offering a robust and scalable solution for humanoid control across a wide range of modes. By eliminating the need for policy retraining for each control mode, our approach improves efficiency and flexibility for future humanoid applications.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- <section class="section">
   <div class="container">
@@ -221,6 +207,23 @@
 
 <section class="section">
   <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Humanoid whole-body control requires adapting to diverse tasks such as navigation, loco-manipulation, and tabletop manipulation, each demanding a different mode of control. For example, navigation relies on root velocity tracking, while tabletop manipulation prioritizes upper-body joint angle tracking. Existing approaches typically train individual policies tailored to a specific command space, limiting their transferability across modes. We present the key insight that full-body kinematic motion imitation can serve as a common abstraction for all these tasks and provide general-purpose motor skills for learning multiple modes of whole-body control. Building on this, we propose HOVER (Humanoid Versatile Controller), a multi-mode policy distillation framework that consolidates diverse control modes into a unified policy. HOVER enables seamless transitions between control modes while preserving the distinct advantages of each, offering a robust and scalable solution for humanoid control across a wide range of modes. By eliminating the need for policy retraining for each control mode, our approach improves efficiency and flexibility for future humanoid applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section">
+  <div class="container">
     <h2 class="title is-2" style="text-align: center;">Supplement Video</h2>
     <div class="columns is-centered">
       <div class="column is-three-quarters is-centered has-text-centered">
@@ -228,7 +231,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container">
@@ -245,6 +248,30 @@
     </div>
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- <h2 class="title is-2" style="text-align: center;">Real-World Human-to-Humanoid Teleoperation</h2> -->
+    <h2 class="title is-2" style="text-align: center; font-size: 1.9rem;">Left-Hand <span style="color: rgb(154, 150, 150);">Mode</span>     |     Right-Hand <span style="color: rgb(154, 150, 150);">Mode</span>     |     Hand-Head <span style="color: rgb(154, 150, 150);">Mode</span><br>
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <video class="lazy-video" controls loop muted playsinline src="./resources/avp-teleop/hover-vr-lefthand.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <div class="content is-two-third has-text-centered">
+        </div>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video class="lazy-video" controls loop muted playsinline src="./resources/avp-teleop/hover-vr-righthand.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <div class="content is-two-third has-text-centered">
+        </div>
+      </div>
+      <div class="column is-full-width is-centered has-text-centered">
+        <video class="lazy-video" controls loop muted playsinline src="./resources/avp-teleop/hover-vr-threepoint.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+        <div class="content is-two-third has-text-centered">
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section class="section">
   <div class="container">
